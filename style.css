@@ -1,0 +1,216 @@
+:root{
+    --red:  hsl(0, 100%, 74%) ;
+    --green: hsl(154, 59%, 51%);
+    --blue:  hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue:  hsl(246, 25%, 77%);
+}
+
+*{
+    margin: 0;
+    padding: 0px, 30px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--red);
+    color: white;
+    background-image: url(images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    column-gap: 35px;
+}
+p{
+    width: 450px;
+    font-size: 14px;
+    font-weight: 400;
+}
+h1{
+    font-weight: 700;
+    width: 500px;
+}
+.trial{
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+    padding: 15px 30px;
+    font-size: 12px;
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 0px 8px rgb(0 0 0 / 0.2);
+
+}
+
+.card{
+    width: 450px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 30px;
+    align-items: center;
+    box-shadow: 0px 5px rgb(0 0 0 / 0.2);
+}
+
+.submit-btn{
+    width: 340px;
+    border-radius: 5px;
+    height: 50px;
+    background-color: var(--green);
+    color: white;
+    border: 1px solid var(--green);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.submit-btn:hover{
+    opacity: 0.8;
+}
+small{
+    color: var(--grayishBlue);
+    font-size: 10px;
+    font-weight: 500;
+
+}
+.small{
+    font-size: 10px;
+    color: var(--grayishBlue);
+    
+}
+a{
+    color: var(--red);
+    text-decoration: none;
+}
+.bottom{
+    text-align: center;
+}
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+    height: 50px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color:var(--grayishBlue);
+}
+
+.form-control.success input {
+	border-color:var(--green);
+    color: var(--green);
+}
+
+.form-control.error input{
+	border-color: var(--red);
+    color: var(--red);
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+    top: 50px;
+	left: 55%;
+    font-style: italic;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+@media screen and (max-width:480px) {
+    body{
+        background-image: url(images/bg-intro-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .form-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        width: 400px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    p{
+        font-size: 16px;
+        width: 380px;
+    }
+    h1{
+       width: 380px; 
+       margin-bottom: 30px;
+    }
+    .right{
+        text-align: center;
+    }
+    .trial{
+        width: 300px;
+        height: 80px;
+        padding: 15px 60px;
+    }
+    .card{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .submit-btn{
+        width:250px ;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .form-control input{
+        width: 250px;
+        display: block;
+        text-align: center;
+    }
+    div.small{
+        /* width: 220px; */
+        text-align: center;
+    }
+}
